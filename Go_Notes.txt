@@ -1,0 +1,58 @@
+Go is a compiled, statically typed language
+
+Complied execuables are OS specific
+
+NO
+    - Type Inheritance (no classes)
+    - Method or operator overloading
+    - Structured exception handling
+
+Go is case sensitive
+
+Variable and package names are lowercase
+
+Names of plublic fields have initial uppercase characcters
+
+Initial uppercase character means the symbol is exported (private)
+
+No semicolon
+
+Built-In Functions
+
+len(string)
+
+panic(error) - stops execution; display error message
+
+recover() - manages behavior of a panicking goroutine
+
+Boolean, Strings, integer, float (32, 64), complex (64, 128), Data collections (Arrays, Slices, Maps, Structs)
+
+Functions, Interfaces, Channels
+
+Data Management (Pointers)
+
+
+# Get variable type - %T
+
+var astr string = "hello" # var <name> <type> = <value>
+
+car := "Suzuki" # works only inside a function. to define outside function should use var keyword
+
+# Numeric types don't implicitly convert. can't add int + float
+
+
+reader := bufio.NewReader(os.Stdin)
+
+input_1, _ := reader.ReadString('\n')
+value_1, err_1 := strconv.ParseFloat(strings.TrimSpace(input_1), 64)
+
+GOOS=windows <linux> <darwin>
+
+The New() function
+   - Allocates but does not initialize memory
+   - Results in zeroed storage but returns a memory address
+
+The make() function
+
+   - Allocates and initialize memory
+   - Allocates non-zeroed storage and returns a memory address
