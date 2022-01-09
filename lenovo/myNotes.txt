@@ -1,0 +1,75 @@
+Go programs are organized into packages. A package is a collection of source files grouped in a single directory.
+
+fmt --> This package contains various functions to allow you to format and print to the console.
+
+The -o option (short for output) allows you to specify the name of the executable file.
+
+GOOS=linux GOARCH=amd64 go build -o 
+
+»» Basic: Examples include strings, numbers, and Booleans.
+»» Aggregate: Examples include arrays and structs.
+»» Reference: Examples include pointers, slices, functions, and channels.
+»» Interface: An interface is a collection of method signatures.
+
+When you declare and initialize a variable using the := operator, you can’t use it for variables declared outside function bodies.
+
+The := operator can only be used for declaring and initializing variables inside functions.
+
+For variables declared inside function bodies, you need to use them, or else you’ll get an error message.
+
+Want to use unused variables inside function, Simply assign the unused variable to a blank identifier (_).
+
+Go also supports raw strings. A raw string is enclosed by a pair of back ticks (``).
+
+There are two methods for finding out the data type of a variable:
+    - Use the %T printing verb in the Printf() function.
+    - Use the reflect package.
+
+    fmt.Println(reflect.TypeOf(start)) // time.Time
+    fmt.Println(reflect.ValueOf(start).Kind()) // struct
+
+    - You can use the TypeOf() function to find out the data type of a variable, and the ValueOf() and Kind() functions to find out the data structure of a variable.
+
+To convert between the various numeric data types like int and float, you can simply use the int(), float32(), and float64() functions.
+
+When a "fallthrough" keyword is present in the switch statement, the next case is evaluated instead of transferring control out of the switch statement.
+
+Instead of using the fallthrough keyword in the example in the previous section, you could also use the case statement to match multiple values.
+    # case "A", "B", "C", "D":
+
+for (init; condition; post) {
+    # Although a for loop technically has three sections (init, condition, and post), the init and post statements are actually optional.
+
+A for loop without the three parts is an infinite loop:
+    for {
+    }
+
+The range keyword returns the following values:
+    »» i: The index of the value you’re accessing.
+    »» v: Each of the values in the OS array.
+    »» If you don’t care about the index, you can use a blank identifier '_'
+
+In Go, a string is essentially a read-only slice of bytes.
+
+for pos, char := range "Hello"{ print(char)} --> 72, 101, 108, 108 ...
+
+Unicode, which uses numbers to represent characters, is a standard for the encoding, representation, and handling of text. It’s a widely used standard for encoding text documents on computers.
+
+When you iterate through a string using the for-range loop, the value you get for each character is the Unicode value. If you want to get the actual character itself, use the Printf() function (with the %c format specifier) from the fmt package:
+
+The index returned by the range keyword actually represents the byte location.
+
+Functions allow you to break down a complex task into smaller, more manageable units. They also make it easier for you to reuse your code.
+
+Named return values: Using named return values makes your function declaration much more descriptive.
+
+A variadic function takes in a variable number of arguments.
+
+Go supports a special type of function known as an anonymous function. As the name implies, an anonymous function is a function without a name.
+
+An anonymous function can form a closure (a function value that references variables from outside its body).
+
+»» The filter() function takes in a collection of items and returns another collection containing the items you want.
+»» The map() function allows you to “map” items from one collection into another collection.
+»» The reduce() function returns a single value based on the collection you pass in.
+
