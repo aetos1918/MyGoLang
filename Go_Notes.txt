@@ -56,3 +56,6 @@ The make() function
 
    - Allocates and initialize memory
    - Allocates non-zeroed storage and returns a memory address
+
+# defer <action> --> Wait until everything complete and run.
+
