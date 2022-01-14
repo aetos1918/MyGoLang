@@ -5,15 +5,18 @@ import (
 )
 
 func main() {
-	num := [5]int{1, 2, 3, 4, 5}
-	gf := filter(num)
+	num := []int{1, 2, 3, 4, 5}
+	evens := filter(num,
+		func(val int) bool {
+			return val%2 == 0
+		})
 
-	fmt.Println(gf(num))
+	fmt.Println(evens)
 }
 
 func filter(arr []int, cond func(int) bool) []int {
 	result := []int{}
-	for _, val := range err {
+	for _, val := range arr {
 		if cond(val) {
 			result = append(result, val)
 		}
