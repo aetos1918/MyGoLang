@@ -73,3 +73,18 @@ An anonymous function can form a closure (a function value that references varia
 »» The map() function allows you to “map” items from one collection into another collection.
 »» The reduce() function returns a single value based on the collection you pass in.
 
+# After an array is created, the array can’t change in size
+
+# To create a slice, you can use the make()
+    s := make([]int, 5)
+
+»» ptr: A pointer that points to the address of the underlying array
+»» len: The length of the slice
+»» cap: The capacity, or maximum number of allowed elements in the array
+
+To find out the length and capacity of the slice s, you use the len() and cap() functions.
+
+# When a slice has reached its capacity, appending items to it will cause it to point to a new underlying array.
+
+# Whether you’re slicing an array or a slice, the result is always a slice
+
