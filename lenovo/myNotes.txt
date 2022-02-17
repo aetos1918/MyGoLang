@@ -88,3 +88,7 @@ To find out the length and capacity of the slice s, you use the len() and cap() 
 
 # Whether you’re slicing an array or a slice, the result is always a slice
 
+copy(destination, source)
+
+The fields in a struct don’t need to be of the same type
+
