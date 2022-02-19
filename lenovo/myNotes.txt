@@ -73,3 +73,10 @@ An anonymous function can form a closure (a function value that references varia
 »» The map() function allows you to “map” items from one collection into another collection.
 »» The reduce() function returns a single value based on the collection you pass in.
 
+# You can’t directly compare structs that contain fields that aren’t comparable, but you can use the cmp package
+
+A Go map type has the following syntax:
+    map[keyType] valueType
+
+# The delete() function does not return a value after deleting the specified key, and it won’t inform you if the specified key doesn’t exist in the map variable. So it’s useful to check for the key’s existence before you delete it.
+
